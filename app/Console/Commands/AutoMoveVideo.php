@@ -78,6 +78,9 @@ class AutoMoveVideo extends Command
                             
                             $storage->delete($file);
                             break;
+                            
+                        case 'xltd':
+                            break;
 
                         default:
                             $storage->delete($file);
@@ -100,6 +103,10 @@ class AutoMoveVideo extends Command
 
         if ($fileInfo['extension'] === 'torrent') {
             return 'torrent';
+        }
+        
+        if ($fileInfo['extension'] === 'xltd') {
+            return 'xltd';
         }
 
         if (in_array($fileInfo['extension'], $this->videoRules)) {
