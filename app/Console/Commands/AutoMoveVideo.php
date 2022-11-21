@@ -26,10 +26,10 @@ class AutoMoveVideo extends Command
     protected $videoRules = ['wmv', 'rmvb', 'mp4', 'avi', 'mkv', 'flv'];
 
     protected $moveFrom = [
-        'from',
+        '迅雷下载',
     ];
 
-    protected $moveTo = 'to';
+    protected $moveTo = 'video';
 
     /**
      * Create a new command instance.
