@@ -26,7 +26,7 @@ class AutoMoveVideo extends Command
     protected $videoRules = ['wmv', 'rmvb', 'mp4', 'avi', 'mkv', 'flv'];
 
     protected $moveFrom = [
-        't1',
+        'from',
     ];
 
     protected $moveTo = 'to';
@@ -48,7 +48,7 @@ class AutoMoveVideo extends Command
      */
     public function handle()
     {
-        $storage = Storage::disk('local');
+        $storage = Storage::disk('downloads');
         $toPath = $this->moveTo;
 
         foreach ($this->moveFrom as $directory) {
