@@ -107,7 +107,6 @@ class AutoMoveVideo extends Command
 
             // 清理空目录
             foreach ($storage->directories($directory) as $tDirectory) {
-                dump($storage->allFiles($tDirectory));
                 if (empty($storage->allFiles($tDirectory))) {
                     $storage->deleteDirectory($tDirectory);
                 }
