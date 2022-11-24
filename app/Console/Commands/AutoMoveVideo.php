@@ -65,7 +65,7 @@ class AutoMoveVideo extends Command
                             //判断当前目录下是否有未完成的
                             foreach ($storage->allFiles(dirname($file)) as $tFile) {
                                 if ($this->fileClass($tFile) === 'xltd') {
-                                    break;
+                                    break 2;
                                 }
                             }
 
