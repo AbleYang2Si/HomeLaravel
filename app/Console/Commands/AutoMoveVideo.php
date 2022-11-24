@@ -91,6 +91,9 @@ class AutoMoveVideo extends Command
                         case 'xltd':
                             break;
 
+                        case 'xltd':
+                            break;
+
                         default:
                             if (time() - $storage->lastModified($file) > 24 * 60 * 60) {
                                 $storage->delete($file);
@@ -123,6 +126,10 @@ class AutoMoveVideo extends Command
 
         if ($fileInfo['extension'] === 'torrent') {
             return 'torrent';
+        }
+
+        if ($fileInfo['extension'] === 'xltd') {
+            return 'xltd';
         }
 
         if ($fileInfo['extension'] === "xltd") {
