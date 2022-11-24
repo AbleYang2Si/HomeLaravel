@@ -55,7 +55,7 @@ return [
 
         'downloads' => [
             'driver' => 'local',
-            'root' => '/downloads',
+            'root' => storage_path('app'),
         ]
 
     ],
