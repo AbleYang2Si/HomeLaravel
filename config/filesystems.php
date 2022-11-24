@@ -55,7 +55,7 @@ return [
 
         'downloads' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => env('FILE_MOVE_ROOT', '/downloads'),
         ]
 
     ],
